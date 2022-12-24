@@ -1,11 +1,17 @@
 import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
+import Main from './components/Main';
 
-function App() {
+const App = () =>{
   return (
-    <div className="App">
-      <header className="App-header">
-          Homepage
-      </header>
+    <div>
+        <Header />
+        <Nav />
+        <Main />
+        <Footer />
     </div>
   );
 }
