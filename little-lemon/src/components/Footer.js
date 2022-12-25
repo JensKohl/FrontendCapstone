@@ -2,10 +2,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <p>This is some content in sticky footer</p>
-    </div>
+    <footer className="footer">
+      <p>(c) Little Lemon 2022</p>
+    </footer>
   );
 };
 
 export default Footer;
+
