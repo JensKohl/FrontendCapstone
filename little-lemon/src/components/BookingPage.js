@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import '../index.css'
+import fetchAPI from "../App"
 
-const BookingForm = ({ timeOptions }) => {
+const BookingForm = ({ timeOptions, setTimeSlots, setDate}) => {
 
     // dictionary for occasion options
     const occasionOptions = [
@@ -9,14 +10,15 @@ const BookingForm = ({ timeOptions }) => {
       {value: "Birthday", label:"Birthday"}
     ] 
     // define hooks and initialize them
-    const [date, setDate] = React.useState(new Date().toLocaleDateString());
+    const [date, setDates] = React.useState(new Date().toLocaleDateString());
     const [timeValue, settimeValue] = React.useState("");
     const [guestNumber, setguestNumber] = React.useState("1");
     const [selOccasion, setoccasionChange] = React.useState(occasionOptions[0].value);
 
     // define event handler for date change. TODO: date of today
     const handleDateChange = event => {
-        setDate(event.target.value);
+        setDates(event.target.value);
+        setDate(new Date(event.target.value));
       };
 
     // define event handler for time change

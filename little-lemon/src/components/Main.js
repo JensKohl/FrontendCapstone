@@ -2,7 +2,7 @@ import React from "react";
 import '../index.css'
 import BookingForm from './BookingPage'
 
-const Main = ({availableTimes}) =>{
+const Main = ({availableTimes, setTimeSlots, setDate}) =>{
   const [open, setOpen] = React.useState(false);
   const onClickHandle = () => {setOpen(true);
   };
@@ -23,7 +23,7 @@ const Main = ({availableTimes}) =>{
         <button onClick={(event) => {
                 click(event)
         }}>Reserve a table</button>
-        {visible && (<BookingForm timeOptions={availableTimes}/>)}
+        {visible && (<BookingForm timeOptions={availableTimes} setTimeSlots={setTimeSlots} setDate={setDate}/>)}
       </div>
 
     <div className="Specials">
