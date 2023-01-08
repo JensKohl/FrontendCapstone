@@ -1,6 +1,6 @@
 import '../index.css'
 import React, { useReducer } from "react";
-import App, { reducer, fetchAPI, initialState } from "./../App";
+import { reducer, fetchAPI, initialState } from "./../App";
 
 const BookingForm = (props) => {
   const [BookingState, dispatcher] = useReducer(reducer, initialState);
@@ -24,7 +24,7 @@ const BookingForm = (props) => {
   };
 
   const SubmitHandler = (e) => {
-    alert(
+    /*alert(
       "WHEN: " +
         BookingState.date +
         " AT: " +
@@ -33,8 +33,10 @@ const BookingForm = (props) => {
         BookingState.guests +
         " WHY: " +
         BookingState.occasion
-    );
+    );*/
   };
+
+  // TODO: hide form after button submit click
 
   return (
     <div className="SubmitForm">
@@ -72,8 +74,6 @@ const BookingForm = (props) => {
         ))}
       </select>
 
-        <p/>
-        <button onClick={SubmitHandler}>SUBMIT</button>
       </div>
     );
   }

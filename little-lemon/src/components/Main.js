@@ -3,6 +3,7 @@ import '../index.css'
 import BookingForm from "./BookingPage";
 import { BookingState } from "./../App";
 
+// TODO: Exercise: Submitting the new booking page to the API nicht gemacht. https://www.coursera.org/learn/meta-front-end-developer-capstone/supplement/mmuFQ/exercise-submitting-the-new-booking-page-to-the-api
 
 const Main = props =>{
   const [open, setOpen] = React.useState(false);
@@ -15,6 +16,8 @@ const Main = props =>{
     e.preventDefault();
     setVisible(true);
   }
+
+  // TODO: make Routes : https://www.coursera.org/learn/meta-front-end-developer-capstone/supplement/Xn1Lx/exercise-setting-up-the-app-components
 
   return (
     <main className="grid-container">
