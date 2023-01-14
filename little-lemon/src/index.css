@@ -12,123 +12,6 @@ code {
     monospace;
 }
 
-.Header {
-  grid-area: header;
-  display: grid;
-  grid-template-areas: "logo nav";
-  background-color: white;
-  color: black;
-}
-
-.Nav {
-  grid-area: nav;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  color: black;
-  position: relative;
-  overflow: hidden;
-  background-color: white;
-}
-
-.Footer {
-  grid-area: nav;
-  display: grid;
-  align-items: center;
-}
-
-Nav a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 3px 3px;
-  text-decoration: none;
-  font-size: 12fr;
-}
-
-.Main {
-  grid-area: main;
-  background-color: #495E57;
-}
-
-div.Main {
-  background-color: #495E57;
-}
-
-div.Main > h1 {
-  color: #F4CE14;
-  font-size: 64px;
-  margin:0px;
-  padding:0px;
-  align-items: left;
-  justify-items: left;
-}
-
-div.SubmitForm {
-  color: white;
-  margin:0px;
-  padding:0px;
-}
-
-div.SubmitForm > button {
-  background-color: #F4CE14;
-  color: black;
-  font-size: 16px;
-  align-items: center;
-  justify-items: center;
-}
-
-div.Main > h2 {
-  color:  white;
-  font-size: 40px;
-  margin:0px;
-  padding:0px;
-}
-
-div.Main > p {
-  color: white;
-  font-size: 18px;
-}
-
-div.Main > button {
-  background-color: #F4CE14;
-  color: black;
-  font-size: 16px;
-  align-items: center;
-  justify-items: center;
-}
-
-.Specials {
-  grid-area: specials;
-}
-
-div.Specials > h1 {
-  color: black;
-  font-size: 64px;
-  margin:0px;
-  padding:0px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'main'
-    'specials';
-  width: 100vw;
-  height: 100vh;
-}
-
-main.grid-container{
-  align-items: left;
-  color: #495E57;
-}
-
-.grid-container > div {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-
 .Logo {
   vertical-align: baseline;
 }
@@ -160,3 +43,5 @@ main.grid-container{
     gap: 1em;
   }
 }
+
+

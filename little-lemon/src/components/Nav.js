@@ -1,23 +1,17 @@
-import React from 'react';
-import "../index.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from 'react-router-dom';
+import React from "react";
+import "../App.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
     return (
       <nav className='Nav'>
         <div>
-          <a href="https://www.w3schools.com"> Home </a>
-          <a href="https://www.w3schools.com"> About </a>
-          <a href="https://www.w3schools.com"> Menu </a>
-          <a href="https://www.w3schools.com"> Reservations </a>
-          <a href="https://www.w3schools.com"> Order Online </a>  
-          <a href="https://www.w3schools.com"> Login </a>  
-
+            <Link to="/">Home</Link>
+            <Link to="/">Menu</Link>
+            <Link to="/BookingForm">Reservation</Link>
+            <Link to="/order">Order Online</Link>
+            <Link to="/about">About</Link>
+            <Link to="/login">Login</Link>
         </div>
       </nav>
     )

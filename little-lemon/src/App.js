@@ -1,33 +1,14 @@
 import './App.css';
-import './index.css'
 import React, { useReducer } from 'react';
-import Header from './components/Header';
+import Home from './components/Home';
 import Footer from './components/Footer';
-import Main from './components/Main';
+import About from "./components/About";
+import ConfirmedBooking from "./components/ConfirmedBooking";
+import BookingForm from "./components/BookingPage";
 
-const seededRandom = function (seed) {
-  var m = 2 ** 35 - 31;
-  var a = 185852;
-  var s = seed % m;
-  return function () {
-    return (s = (s * a) % m) / m;
-  };
-};
+import Hero from './components/Hero';
 
-export const fetchAPI = function (date) {
-  let result = [];
-  let random = seededRandom(date.getDate());
-
-  for (let i = 17; i <= 23; i++) {
-    if (random() < 0.5) {
-      result.push(i + ":00");
-    }
-    if (random() < 0.5) {
-      result.push(i + ":30");
-    }
-  }
-  return result;
-};
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export const reducer = (BookingState, action) => {
   switch (action.type) {
@@ -60,9 +41,9 @@ export const reducer = (BookingState, action) => {
 
 export const initialState = {
   date: "",
-  availableTimes: ["17:00", "18:00"],
+  availableTimes: ["Please select a time"],
   guests: 1,
-  occasion: ["Anniversary", "Birthday"]
+  occasion: ["Anniversary", "Birthday", "Engagement"]
 };
 
 export let BookingState = {
@@ -75,11 +56,17 @@ export let BookingState = {
 const App = () =>{
 
   return (
-    <div>
-        <Header />
-        <Main bookingstate={BookingState}/>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>} />
+          <Route path="/BookingForm" element={BookingForm()} />
+          <Route path="/ConfirmedBooking" element={ConfirmedBooking()} />
+        </Routes>
         <Footer />
-    </div>
+      </div>
+    </Router>
   );
 }
 

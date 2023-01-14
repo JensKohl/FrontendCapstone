@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App>
-      <meta name="og:title" content="Little Lemon Homepage"/>
-      <meta name="description" content="a nice restaurant"/>
-      <meta name="og:image" content="../images/Asset 7@4x.png"/>
-      
-    </App>
+      <App>
+        <meta name="og:title" content="Little Lemon Homepage"/>
+        <meta name="description" content="a nice restaurant"/>
+        <meta name="og:image" content="../images/Asset 7@4x.png"/>  
+      </App>
   </React.StrictMode>
 );
 

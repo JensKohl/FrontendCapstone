@@ -1,17 +1,17 @@
 import React from 'react';
-import mainLogo from '../images/Logo2.png';
+import LittleLemonLogo from '../images/Logo.svg';
 import "../index.css";
 import Nav from "./Nav"
 
 const Header = () =>{
     return (
-      <header className='Header'>
-          <img src={mainLogo} className='Logo' alt="logo" width={150} height={50}></img> 
-        <Nav className="Nav" />
+      <header>
+        <div className="container">
+          <img src={LittleLemonLogo} alt="Little Lemon logo" />
+          <Nav/>
+        </div>
       </header>
     );
 }
 
-export default Header
-
-
+export default Header;
